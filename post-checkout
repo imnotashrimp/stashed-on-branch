@@ -1,0 +1,17 @@
+#!/bin/bash
+
+stash_msg=": WIP on $(git branch --show-current):"
+stash_list=`git stash list | grep -w "$stash_msg"`
+bold=$(tput bold)
+endbold=$(tput sgr0)
+
+if [[ -n "$stash_list" ]]; then
+  echo
+  echo ${bold}*** Found stashes from this branch ***${endbold}
+  git stash list | grep -w "$stash_msg"
+  echo
+  echo ${bold}This may not be a complete list.${endbold}
+  echo Always double-check the index when working with stashes.
+fi
+
+exit 0
