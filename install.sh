@@ -12,5 +12,6 @@ if [[ -f $target ]] ; then
   exit 1
 else
   curl -s $raw_src -o $target
+  chmod +x $target
   echo Hook installed at $target
 fi
