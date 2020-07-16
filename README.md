@@ -21,5 +21,5 @@ bash <(curl -s https://raw.githubusercontent.com/imnotashrimp/stashed-on-branch/
 
 ## Manual installation
 
-Copy the [post-checkout] script
+Copy the [post-checkout](https://raw.githubusercontent.com/imnotashrimp/stashed-on-branch/master/post-checkout) script
 to your repo at `.git/hooks/post-checkout`.
