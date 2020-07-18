@@ -15,7 +15,7 @@ You'll need [curl](https://curl.haxx.se/) installed to run this command.
 `cd` into your repo's root folder:
 
 ```bash
-cd <YOUR_REPO_ROOT>
+cd /path/to/your/repo/
 ```
 
 Then run this command:
