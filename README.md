@@ -67,7 +67,6 @@ git checkout DELETEME
 
 If you see a list of stashes from the branch,
 everything's good.
-
 If not, double-check that the hook was installed in the repo at `.git/hooks/post-checkout`.
 
 When you're done,
