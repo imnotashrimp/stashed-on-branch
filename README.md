@@ -8,7 +8,15 @@ so you'll need to install this hook
 in every repo where you want it,
 and on every collaborator's machine.
 
-## Automated installation
+## Installation
+
+[Installing the hook automatically](#automated-installation)
+is is simplest,
+but if you already have a `post-checkout` git hook,
+you'll need to
+[install the hook manually](#manual-installation).
+
+### Automated installation
 
 You'll need [curl](https://curl.haxx.se/) installed to run this command.
 
@@ -24,9 +32,48 @@ Then run this command:
 bash <(curl -s https://raw.githubusercontent.com/imnotashrimp/stashed-on-branch/master/install.sh)
 ```
 
-## Manual installation
+### Manual installation
 
 1. Copy the
   [post-checkout](https://raw.githubusercontent.com/imnotashrimp/stashed-on-branch/master/post-checkout)
   script to your repo at `.git/hooks/post-checkout`.
 2. Make the script executable by running `chmod +x /your/repo/path/.git/hooks/post-checkout`.
+
+## Try it out
+
+After installation, create a temporary branch:
+
+```shell
+git checkout -b DELETEME
+```
+
+Change a file, and then stash the changes:
+
+```shell
+git stash
+```
+
+Switch to a different branch:
+
+```shell
+git checkout master
+```
+
+And then switch back to the temporary branch:
+
+```shell
+git checkout DELETEME
+```
+
+If you see a list of stashes from the branch,
+everything's good.
+
+If not, double-check that the hook was installed in the repo at `.git/hooks/post-checkout`.
+
+When you're done,
+switch to another branch and delete the test branch:
+
+```shell
+git checkout master
+git branch -d DELETEME
+```
