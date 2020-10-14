@@ -1,6 +1,6 @@
 #!/bin/bash
 
-stash_msg=": WIP on $(git branch --show-current):"
+stash_msg=": .* $(git branch --show-current):"
 stash_list=`git stash list | grep -w "$stash_msg"`
 bold=$(tput bold)
 endbold=$(tput sgr0)
