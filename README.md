@@ -41,38 +41,38 @@ bash <(curl -s https://raw.githubusercontent.com/imnotashrimp/stashed-on-branch/
 
 ## Try it out
 
-After installation, create a temporary branch:
+1. After installation, create a temporary branch:
 
-```shell
-git checkout -b DELETEME
-```
+    ```shell
+    git checkout -b DELETEME
+    ```
 
-Change a file, and then stash the changes:
+2. Change a file, and then stash the changes:
 
-```shell
-git stash
-```
+    ```shell
+    git stash
+    ```
 
-Switch to a different branch:
+3. Switch to a different branch:
 
-```shell
-git checkout master
-```
+    ```shell
+    git checkout master
+    ```
 
-And then switch back to the temporary branch:
+4. And then switch back to the temporary branch:
 
-```shell
-git checkout DELETEME
-```
+    ```shell
+    git checkout DELETEME
+    ```
 
-If you see a list of stashes from the branch,
-everything's good.
-If not, double-check that the hook was installed in the repo at `.git/hooks/post-checkout`.
+    If you see a list of stashes from the branch,
+    everything's good.
+    If not, double-check that the hook was installed in the repo at `.git/hooks/post-checkout`.
 
-When you're done,
-switch to another branch and delete the test branch:
+5. When you're done,
+  switch to another branch and delete the test branch:
 
-```shell
-git checkout master
-git branch -d DELETEME
-```
+    ```shell
+    git checkout master
+    git branch -d DELETEME
+    ```
