@@ -10,8 +10,8 @@ and on every collaborator's machine.
 
 ## Installation
 
-[Installing the hook automatically](#automated-installation)
-is is simplest,
+[Automated installation](#automated-installation)
+is simplest,
 but if you already have a `post-checkout` git hook,
 you'll need to
 [install the hook manually](#manual-installation).
