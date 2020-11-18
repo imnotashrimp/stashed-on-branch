@@ -1,4 +1,4 @@
-# Check For Stashes on Branch
+# stashed-on-branch git hook
 
 This is a simple `post-checkout` git hook
 that checks for stashes that may be on the current branch.
